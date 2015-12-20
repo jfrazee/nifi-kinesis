@@ -9,7 +9,7 @@ import org.apache.nifi.annotation.documentation.{ Tags, CapabilityDescription }
 @CapabilityDescription("Get data records from an Amazon Kinesis stream")
 class GetKinesisRecords extends KinesisProcessor {
   def onTrigger(context: ProcessContext, session: ProcessSession): Unit = {
-    for (flowfile ← Option(session.get)) {
+    for (flowfile <- Option(session.get)) {
       session.transfer(flowfile, REL_SUCCESS)
     }
   }

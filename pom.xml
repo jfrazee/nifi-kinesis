@@ -21,6 +21,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.nifi</groupId>
             <artifactId>nifi-api</artifactId>
             <version>${nifi.version}</version>
@@ -132,9 +137,6 @@
                   <goals>
                     <goal>format</goal>
                   </goals>
-                  <configuration>
-                    <rewriteArrowSymbols>true</rewriteArrowSymbols>
-                  </configuration>
                 </execution>
               </executions>
             </plugin>
